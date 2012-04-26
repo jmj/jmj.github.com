@@ -4,7 +4,7 @@
   <title><![CDATA[Category: testing | Rambelings]]></title>
   <link href="http://jmj.github.com/blog/categories/testing/atom.xml" rel="self"/>
   <link href="http://jmj.github.com/"/>
-  <updated>2012-04-26T11:17:51-05:00</updated>
+  <updated>2012-04-26T11:58:27-05:00</updated>
   <id>http://jmj.github.com/</id>
   <author>
     <name><![CDATA[Jeremy Jones]]></name>
@@ -189,6 +189,10 @@
 </span><span class='line'><span class="n">fcntl</span><span class="o">.</span><span class="n">fcntl</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">fileno</span><span class="p">(),</span> <span class="n">fcntl</span><span class="o">.</span><span class="n">F_SETFL</span><span class="p">,</span> <span class="n">fl</span><span class="p">)</span>
 </span><span class='line'><span class="n">getfile</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&#39;cfg.txt&#39;</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3>Block Quote</h3>
+
+<p><blockquote><p>Flying is learning how to throw yourself at the ground and miss.</p><footer><strong>Douglas Adams</strong> <cite>HHGTTG</cite></footer></blockquote></p>
 ]]></content>
   </entry>
   

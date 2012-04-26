@@ -4,7 +4,7 @@
   <title><![CDATA[Rambelings]]></title>
   <link href="http://jmj.github.com/atom.xml" rel="self"/>
   <link href="http://jmj.github.com/"/>
-  <updated>2012-04-26T11:17:51-05:00</updated>
+  <updated>2012-04-26T11:58:27-05:00</updated>
   <id>http://jmj.github.com/</id>
   <author>
     <name><![CDATA[Jeremy Jones]]></name>
@@ -178,6 +178,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<h3>Block Quote</h3>
+
+<blockquote><p>Flying is learning how to throw yourself at the ground and miss.</p><footer><strong>Douglas Adams</strong> <cite>HHGTTG</cite></footer></blockquote>
 
 ]]></content>
   </entry>
