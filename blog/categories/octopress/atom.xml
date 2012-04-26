@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Rambelings]]></title>
   <link href="http://jmj.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://jmj.github.com/"/>
-  <updated>2012-04-26T12:04:44-05:00</updated>
+  <updated>2012-04-26T12:18:25-05:00</updated>
   <id>http://jmj.github.com/</id>
   <author>
     <name><![CDATA[Jeremy Jones]]></name>
@@ -24,43 +24,185 @@
 
 <h3>codeblock plugin</h3>
 
-<p>{% codeblock lang:python %}</p>
-
-<h1>do not need this.  )(s)ead info from cfg.xt</h1>
-
-<p>def portlist(ser):</p>
-
-<pre><code>data = ''
-escalatepriv(ser)
-ser.flushInput()
-ser.write('file dir settings\r\n')
-data = readdata(ser)
-dl = [x[5:6] for x in
-        [y.strip() for y in data.split('\r\n')]
-        if x.startswith('SET_P')]
-return dl
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">do</span> <span class="ow">not</span> <span class="n">need</span> <span class="n">this</span><span class="o">.</span>  <span class="p">)(</span><span class="n">s</span><span class="p">)</span><span class="n">ead</span> <span class="n">info</span> <span class="kn">from</span> <span class="nn">cfg.xt</span><span class="err">&lt;/</span><span class="nn">h1</span><span class="err">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">portlist</span><span class="p">(</span><span class="n">ser</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+</span><span class='line'><span class="n">escalatepriv</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</span><span class='line'><span class="n">ser</span><span class="o">.</span><span class="n">flushInput</span><span class="p">()</span>
+</span><span class='line'><span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;file dir settings</span><span class="se">\r\n</span><span class="s">&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="n">readdata</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</span><span class='line'><span class="n">dl</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\r\n</span><span class="s">&#39;</span><span class="p">)]</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;SET_P&#39;</span><span class="p">)]</span>
+</span><span class='line'><span class="k">return</span> <span class="n">dl</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Cras felis metus, accumsan egestas consectetur ut, accumsan eu lectus. Aenean euismod eros ac lorem imperdiet vel tincidunt dui sollicitudin. Proin nec dignissim lorem. Nullam ac eros at nulla blandit lacinia a sed risus. Duis dictum nisl vel dolor vulputate id ullamcorper odio egestas. Praesent lobortis fermentum velit vitae sodales. Nulla vitae sem nunc, at fringilla leo.</p>
 
 <h3>Include code</h3>
 
-<p>{% include_code lang:python pywork.py %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (pywork.py)</span> <a href='/downloads/code/pywork.py'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">serial</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">time</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">subprocess</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">fcntl</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">os</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">escalatepriv</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">data</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+</span><span class='line'>    <span class="c"># make sure we have a prompt</span>
+</span><span class='line'>    <span class="n">s</span><span class="o">.</span><span class="n">flushInput</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">s</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\r\n</span><span class="s">&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">data</span> <span class="o">=</span> <span class="n">readdata</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">indx</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;=&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">indx</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">indx</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;&gt;&gt;&#39;</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">return</span>
+</span><span class='line'>    <span class="n">s</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;&#39;&#39;quit</span><span class="se">\r\n</span><span class="s">acc</span><span class="se">\r\n</span><span class="s">OTTER</span><span class="se">\r\n</span><span class="s">2ac</span><span class="se">\r\n</span><span class="s">TAIL</span><span class="se">\r\n</span><span class="s">&#39;&#39;&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">s</span><span class="o">.</span><span class="n">flushInput</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># do not need this.  )(s)ead info from cfg.xt</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">portlist</span><span class="p">(</span><span class="n">ser</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">data</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+</span><span class='line'>    <span class="n">escalatepriv</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">ser</span><span class="o">.</span><span class="n">flushInput</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;file dir settings</span><span class="se">\r\n</span><span class="s">&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">data</span> <span class="o">=</span> <span class="n">readdata</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">dl</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span>
+</span><span class='line'>            <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\r\n</span><span class="s">&#39;</span><span class="p">)]</span>
+</span><span class='line'>            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;SET_P&#39;</span><span class="p">)]</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">dl</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">readdata</span><span class="p">(</span><span class="n">ser</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">pc</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>    <span class="n">dc</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">dc</span> <span class="o">=</span> <span class="n">ser</span><span class="o">.</span><span class="n">inWaiting</span><span class="p">()</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">dc</span> <span class="o">==</span> <span class="n">pc</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">break</span>
+</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">pc</span> <span class="o">=</span> <span class="n">dc</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">ser</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">dc</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">getfile</span><span class="p">(</span><span class="n">ser</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">escalatepriv</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">readdata</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;file read </span><span class="si">%s</span><span class="se">\r\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">))</span>
+</span><span class='line'>    <span class="n">ser</span><span class="o">.</span><span class="n">flushInput</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s">&#39;/usr/bin/rb&#39;</span><span class="p">,</span> <span class="s">&#39;-vv&#39;</span><span class="p">,],</span>
+</span><span class='line'>            <span class="n">stdin</span><span class="o">=</span><span class="n">ser</span><span class="o">.</span><span class="n">fileno</span><span class="p">(),</span> <span class="n">stdout</span><span class="o">=</span><span class="n">ser</span><span class="o">.</span><span class="n">fileno</span><span class="p">())</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">s</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s">&#39;/dev/ttyS1&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">## serial port must block</span>
+</span><span class='line'><span class="n">fl</span> <span class="o">=</span> <span class="n">fcntl</span><span class="o">.</span><span class="n">fcntl</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">fileno</span><span class="p">(),</span> <span class="n">fcntl</span><span class="o">.</span><span class="n">F_GETFL</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># flip the O-NONBLOCK bits</span>
+</span><span class='line'><span class="n">fl</span>  <span class="o">&amp;=</span> <span class="o">~</span><span class="n">os</span><span class="o">.</span><span class="n">O_NONBLOCK</span>
+</span><span class='line'><span class="n">fcntl</span><span class="o">.</span><span class="n">fcntl</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">fileno</span><span class="p">(),</span> <span class="n">fcntl</span><span class="o">.</span><span class="n">F_SETFL</span><span class="p">,</span> <span class="n">fl</span><span class="p">)</span>
+</span><span class='line'><span class="n">getfile</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&#39;cfg.txt&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Proin dignissim ligula at sapien sodales suscipit. Praesent blandit vehicula nunc vel ultrices. Integer et tortor sem. Donec vel tincidunt ligula. Donec a commodo lorem. Donec felis turpis, pulvinar eget porta ut, facilisis id nibh. Fusce elementum tellus sed odio pellentesque eu aliquet ipsum dictum. Vestibulum felis turpis, placerat luctus interdum euismod, dictum sit amet metus. Nunc interdum elementum felis, convallis sagittis sapien ultricies vel. Vestibulum a luctus massa. Nam at eros vel diam interdum molestie nec quis metus. Vivamus venenatis bibendum urna vitae lacinia. Pellentesque nibh justo, congue volutpat ornare eget, scelerisque at lacus.</p>
 
 <h3>Block Quote</h3>
 
-<p>{% blockquote Douglas Adams, HHGTTG %}
-Flying is learning how to throw yourself at the ground and miss.
-{% endblockquote %}</p>
+<p><blockquote><p>Flying is learning how to throw yourself at the ground and miss.</p><footer><strong>Douglas Adams</strong> <cite>HHGTTG</cite></footer></blockquote></p>
 
-<p>{% pullquote %}
-Donec non leo lacus, ut sollicitudin diam. Maecenas enim quam, eleifend ac feugiat sit amet, imperdiet eu sem. {" Mauris porta purus eu tellus vulputate vehicula. "} In sed libero est. Fusce augue odio, pharetra ut sodales ut, malesuada a tellus. Aenean et lectus sem, eget accumsan risus. Maecenas mollis justo id est porta aliquam tempor quam blandit.</p>
-
-<p>Sed facilisis ante ac augue mattis ac varius arcu porttitor. Duis aliquam sem ac tellus porta sit amet aliquet purus bibendum. Donec tincidunt facilisis nunc, nec condimentum diam pharetra ut. Curabitur a quam ipsum, at eleifend sapien. Sed turpis nunc, tincidunt eu pulvinar eu, luctus ac orci. Aliquam a est ante. Praesent iaculis sagittis magna, sed sodales nisl rhoncus a. Nulla vel mi sed metus varius euismod. Vivamus lacinia nibh at felis iaculis molestie.</p>
+<p><span class='pullquote-right' data-pullquote='Mauris porta purus eu tellus vulputate vehicula. '>
+Donec non leo lacus, ut sollicitudin diam. Maecenas enim quam, eleifend ac feugiat sit amet, imperdiet eu sem. Mauris porta purus eu tellus vulputate vehicula. In sed libero est. Fusce augue odio, pharetra ut sodales ut, malesuada a tellus. Aenean et lectus sem, eget accumsan risus. Maecenas mollis justo id est porta aliquam tempor quam blandit.
+</span>
+Sed facilisis ante ac augue mattis ac varius arcu porttitor. Duis aliquam sem ac tellus porta sit amet aliquet purus bibendum. Donec tincidunt facilisis nunc, nec condimentum diam pharetra ut. Curabitur a quam ipsum, at eleifend sapien. Sed turpis nunc, tincidunt eu pulvinar eu, luctus ac orci. Aliquam a est ante. Praesent iaculis sagittis magna, sed sodales nisl rhoncus a. Nulla vel mi sed metus varius euismod. Vivamus lacinia nibh at felis iaculis molestie.</p>
 ]]></content>
   </entry>
   
