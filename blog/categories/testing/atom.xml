@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: testing | Rambelings]]></title>
+  <link href="http://jmj.github.com/blog/categories/testing/atom.xml" rel="self"/>
+  <link href="http://jmj.github.com/"/>
+  <updated>2012-04-26T10:56:17-05:00</updated>
+  <id>http://jmj.github.com/</id>
+  <author>
+    <name><![CDATA[Jeremy Jones]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[checking out features]]></title>
+    <link href="http://jmj.github.com/blog/2012/04/26/checking-out-features/"/>
+    <updated>2012-04-26T10:47:00-05:00</updated>
+    <id>http://jmj.github.com/blog/2012/04/26/checking-out-features</id>
+    <content type="html"><![CDATA[<h1>Just playing around with octopress features and plugins</h1>
+
+<h2>codeblock plugin</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>[] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">do</span> <span class="ow">not</span> <span class="n">need</span> <span class="n">this</span><span class="o">.</span>  <span class="p">)(</span><span class="n">s</span><span class="p">)</span><span class="n">ead</span> <span class="n">info</span> <span class="kn">from</span> <span class="nn">cfg.xt</span><span class="err">&lt;/</span><span class="nn">h1</span><span class="err">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">portlist</span><span class="p">(</span><span class="n">ser</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+</span><span class='line'><span class="n">escalatepriv</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</span><span class='line'><span class="n">ser</span><span class="o">.</span><span class="n">flushInput</span><span class="p">()</span>
+</span><span class='line'><span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;file dir settings</span><span class="se">\r\n</span><span class="s">&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="n">data</span> <span class="o">=</span> <span class="n">readdata</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
+</span><span class='line'><span class="n">dl</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\r\n</span><span class="s">&#39;</span><span class="p">)]</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;SET_P&#39;</span><span class="p">)]</span>
+</span><span class='line'><span class="k">return</span> <span class="n">dl</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>Include code</h2>
+
+<p>Liquid error: No such file or directory - /Users/jjones/src/octopress/source/downloads/code</p>
+]]></content>
+  </entry>
+  
+</feed>
