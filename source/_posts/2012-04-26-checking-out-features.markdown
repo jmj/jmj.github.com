@@ -8,8 +8,10 @@ categories: [octopress, testing, plugins]
 
 ## Just playing around with octopress features and plugins
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus diam quis purus pellentesque sollicitudin. Cras fringilla dolor vitae est luctus et commodo turpis tempor. In sed justo purus. Quisque sit amet bibendum velit. Phasellus vitae dui in arcu interdum fringilla. Maecenas justo enim, ullamcorper vitae commodo sit amet, commodo ut magna. Nullam dui arcu, accumsan sit amet laoreet et, consequat et quam. Sed varius adipiscing adipiscing. Maecenas nibh nulla, ullamcorper eget sollicitudin scelerisque, consequat eget nibh. Nullam ac sem nulla. Cras felis massa, placerat ut rhoncus in, auctor sed ligula. Fusce lobortis neque ac nulla consequat at volutpat nunc sodales. Vestibulum rhoncus feugiat tempor. Nam nec nisi eget sem dignissim bibendum. Nam lectus sem, tincidunt sed sagittis id, dapibus quis est. Aenean ullamcorper sapien sed est sagittis molestie.
+
 ### codeblock plugin
-{% codeblock [lang:python] %}
+{% codeblock lang:python %}
 # do not need this.  )(s)ead info from cfg.xt
 def portlist(ser):
     data = ''
@@ -23,7 +25,29 @@ def portlist(ser):
     return dl
 {% endcodeblock %}
 
+Cras felis metus, accumsan egestas consectetur ut, accumsan eu lectus. Aenean euismod eros ac lorem imperdiet vel tincidunt dui sollicitudin. Proin nec dignissim lorem. Nullam ac eros at nulla blandit lacinia a sed risus. Duis dictum nisl vel dolor vulputate id ullamcorper odio egestas. Praesent lobortis fermentum velit vitae sodales. Nulla vitae sem nunc, at fringilla leo.
+
 ### Include code
 {% include_code lang:python pywork.py %}
+
+Proin dignissim ligula at sapien sodales suscipit. Praesent blandit vehicula nunc vel ultrices. Integer et tortor sem. Donec vel tincidunt ligula. Donec a commodo lorem. Donec felis turpis, pulvinar eget porta ut, facilisis id nibh. Fusce elementum tellus sed odio pellentesque eu aliquet ipsum dictum. Vestibulum felis turpis, placerat luctus interdum euismod, dictum sit amet metus. Nunc interdum elementum felis, convallis sagittis sapien ultricies vel. Vestibulum a luctus massa. Nam at eros vel diam interdum molestie nec quis metus. Vivamus venenatis bibendum urna vitae lacinia. Pellentesque nibh justo, congue volutpat ornare eget, scelerisque at lacus.
+
+### Block Quote
+{% blockquote Douglas Adams, HHGTTG %}
+Flying is learning how to throw yourself at the ground and miss.
+{% endblockquote %}
+
+{% pullquote %}
+Donec non leo lacus, ut sollicitudin diam. Maecenas enim quam, eleifend ac feugiat sit amet, imperdiet eu sem. {" Mauris porta purus eu tellus vulputate vehicula. "} In sed libero est. Fusce augue odio, pharetra ut sodales ut, malesuada a tellus. Aenean et lectus sem, eget accumsan risus. Maecenas mollis justo id est porta aliquam tempor quam blandit.
+{% endpullquote %}
+Sed facilisis ante ac augue mattis ac varius arcu porttitor. Duis aliquam sem ac tellus porta sit amet aliquet purus bibendum. Donec tincidunt facilisis nunc, nec condimentum diam pharetra ut. Curabitur a quam ipsum, at eleifend sapien. Sed turpis nunc, tincidunt eu pulvinar eu, luctus ac orci. Aliquam a est ante. Praesent iaculis sagittis magna, sed sodales nisl rhoncus a. Nulla vel mi sed metus varius euismod. Vivamus lacinia nibh at felis iaculis molestie.
+
+
+
+
+
+
+
+
 
 
