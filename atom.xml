@@ -4,7 +4,7 @@
   <title><![CDATA[Rambelings]]></title>
   <link href="http://jmj.github.com/atom.xml" rel="self"/>
   <link href="http://jmj.github.com/"/>
-  <updated>2012-04-26T12:02:39-05:00</updated>
+  <updated>2012-04-26T12:04:44-05:00</updated>
   <id>http://jmj.github.com/</id>
   <author>
     <name><![CDATA[Jeremy Jones]]></name>
@@ -24,7 +24,7 @@
 
 <h3>codeblock plugin</h3>
 
-<p>{% codeblock [lang:python] %}</p>
+<p>{% codeblock lang:python %}</p>
 
 <h1>do not need this.  )(s)ead info from cfg.xt</h1>
 
