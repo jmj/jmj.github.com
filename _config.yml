@@ -14,8 +14,9 @@ author :
   name : Jeremy Jones
   email : jeremyj@letifer.org
   github : jmj
-  twitter : username
-  feedburner : feedname
+  twitter: false
+  #twitter : username
+  #feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -80,7 +81,8 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : false
+    #provider : disqus
     disqus :
       short_name : jekyllbootstrap
     livefyre :
@@ -98,7 +100,8 @@ JB :
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : google 
+    provider: false
+    #provider : google 
     google : 
         tracking_id : 'UA-123-12'
     getclicky :
