@@ -8,13 +8,13 @@ tags: []
 {% include JB/setup %}
 When you run a dynamic data center environment, there are many tools that you use to ensure that everything runs smooth.  One of the most important tools you'll use is your provisioning system.  In a dynamic environment, systems are spun up and down frequently, and having a proper set of tools to manage provisioning tasks keeps workloads low.
 
-There are many provisioning tools floating around out there.  From commercial products, like [SCCM](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/default.aspx) and [IBM's Tivolli Suite](http://www.ibm.com/software/tivoli/), to various open source and free solutions.  One of my favorites is [Cobbler](http://www.cobblerd.org/).  Cobbler works great for Linux and (most0 other UNIX like systems, but doesn't handle Windows so well.
+There are many provisioning tools floating around out there.  From commercial products, like [SCCM](http://www.microsoft.com/en-us/server-cloud/products/system-center-2012-r2/default.aspx) and [IBM's Tivolli Suite](http://www.ibm.com/software/tivoli/), to various open source and free solutions.  One of my favorites is [Cobbler](http://www.cobblerd.org/).  Cobbler works great for Linux and (most) other UNIX like systems, but doesn't handle Windows so well.
 
-Fortunately, there is a way to use cobbler with windows, and even, integrate configuration management.  In this post, I'll explore the steps required to provision Windows virtual and physical machines using cobbler.  Before we get to far, there's a few things you'll need:
+Fortunately, there is a way to use cobbler with windows, and even, integrate configuration management.  In this post, I'll explore the steps required to provision Windows virtual and physical machines using cobbler.  Before we get too far, there's a few things you'll need:
 
 *   A Technician machine
 
-    This is the term that Microsoft uses to refer to a Windows system that is used to run the tools and other operations.  This machine can be any version of Windows, so long as the WAIK tools can run.
+    This is the term that Microsoft uses to refer to a Windows system that is used to run the tools and other operations that are part of automated deployment.  This machine can be any version of Windows, so long as the WAIK tools can run.
 
 *   [The Windows Automated Installation Kit](http://www.microsoft.com/en-us/download/details.aspx?id=5753)
 
@@ -26,7 +26,7 @@ Fortunately, there is a way to use cobbler with windows, and even, integrate con
 
 *   Curl for windows
 
-    To my knowledge, WinPE doesn't have any good way to get data via HTTP.  Curl is an easy way to add that functionality.  Note, be sure to use the version of curl that matches your architecture.  This example targets AMD64, but the 32 compat layer will be be installed (to reduce image size).  
+    To my knowledge, WinPE doesn't have any good way to get data via HTTP.  Curl is an easy way to add that functionality.  Note, be sure to use the version of curl that matches your architecture.  This example targets AMD64; the 32 bit compat layer will not be installed (to reduce image size).  
 
 *   A working Cobbler instance.
 
@@ -38,7 +38,7 @@ Once all of your tools are installed and working, we should be ready to start.  
 
 Getting Started
 
-There are several way to get a Windows installation started.  The method I chose integrates well with cobbler, and is easy to generate and manipulate.  Were are going to build a custom [WindowsPE](http://en.wikipedia.org/wiki/Windows_Preinstallation_Environment) CD image that can be booted over the network, and use to start the install process.
+There are several ways to get a Windows installation started.  The method I chose integrates well with cobbler, and is easy to generate and manipulate.  Were are going to build a custom [Windows PE](http://en.wikipedia.org/wiki/Windows_Preinstallation_Environment) CD image that can be booted over the network, and used to start the install process.
 
 First we'll need a working environment.  This is created with the copype utility from AIK.
 
@@ -58,7 +58,7 @@ We want to maximize the amount of work that cobbler does, but there's a few pre-
 
 This is a simple set of commands that winpeshl will execute to start up the windows shell.  In this case, we're calling wpeinit, then a script, which will get our install started.  Wpeinit is a WinPE utility that initializes the Windows PE environment, including, loading any drivers that have been added to your WinPE image.  Now we'll need a couple of scripts to finish setting up our environment.  
 
-Unfortunately, I do not know of a way to pass command line options into WinPE, so this is the one place that we'll need to hard code the host name of our cobbler server.  There are a couple of pieces of information that will be needed to get our install going properly.  These will each be performed in init.cmd.  To keep things separated, lets put everything in %SYSTEMDRIVE%\local.  %SYSTEMDRIVE% is a windows environment variable that store the drive letter of the  partition that the windows system is on.  In WinPE, this is almost always X:, but to be safe, we'll use the env var.  So let's create a local scripts directory:
+Unfortunately, I do not know of a way to pass command line options into WinPE, so this is the one place that we'll need to hard code the host name of our cobbler server.  There are a couple of pieces of information that will be needed to get our install going properly.  These will be obtained in init.cmd.  To keep things separated, lets put everything in %SYSTEMDRIVE%\local.  %SYSTEMDRIVE% is a windows environment variable that stores the drive letter of the  partition that the windows system is on.  In WinPE, this is almost always X:, but to be safe, we'll use the env var.  So let's create a local scripts directory:
 
     mkdir c:\winpe\mount\local
 
@@ -93,7 +93,7 @@ Setsysname will create an environment variable (COBBLER_SYSNAME) with the system
     call %TEMP%\getks.cmd
     call %TEMP%\runsetup.cmd
 
-Make sure you've added curl to your wim.  From the curl binary zipfile, copy dlls\*.* and bin\*.* to c:\winpe\mount\windows\system32.
+Make sure you've added curl to your wim.  From the curl binary zipfile, copy dlls\\*.* and bin\\*.* to c:\winpe\mount\windows\system32.
 
 That should conclude our WIM modifications.  Unmount it:
 
@@ -107,9 +107,9 @@ Now, let's create a CD image.  This is done with the oscdimg tool:
 
     oscdimg -n -bc:\winpe\etfsboot.com c:\winpe\ISO c:\winpe\winpe_cobbler_amd64.iso
 
-We have one file task that we'll need the technician computer for.  Fire up the Windows System Image Manager and create an answer file for your windows install.  How to do this is beyond the scope of this discussion, but [tutorials](http://technet.microsoft.com/en-us/library/cc749317.aspx) should be easy enough to find.
+We have one final task that we'll need the technician computer for.  Fire up the Windows System Image Manager and create an answer file for your windows install.  How to do this is beyond the scope of this discussion, but [tutorials](http://technet.microsoft.com/en-us/library/cc749317.aspx) should be easy enough to find.
 
-Now that we're done with the windows side, copy your custom WinPE ISO, your Windows 7 ISO, and answer file to your cobbler server, and store them in appropriate locations.  On my system (Ubuntu 13.10), I places my answer file in /var/lib/cobbler/kickstarts, my WinPE ISO in /var/lib/cobbler/isos, and left my Win7 ISO in my homedir (we actually need to extract it).
+Now that we're done with the windows side, copy your custom WinPE ISO, your Windows 7 ISO, and answer file to your cobbler server, and store them in appropriate locations.  On my system (Ubuntu 13.10), I placed my answer file in /var/lib/cobbler/kickstarts, my WinPE ISO in /var/lib/cobbler/isos, and left my Win7 ISO in my homedir (we actually need to extract it).
 
 Mount the Windows 7 ISO someplace, and copy the contents to a location that you can share via samba.  If you do not plan to use the pxe_just_once feature of cobbler, then there's no need to extract the contents of the ISO.  Just mount it, and share the directory.  If it's not already installed, install samba on your cobbler server, and add a share:
 
@@ -134,7 +134,7 @@ and a profile
 
     cobbler profile add --name=windows7-x86_64 --distro=windows7-x86_64 --kickstart=/var/lib/cobbler/kickstarts/win7-amd64-unattend.xml
 
-Edit your answer file, and replace any bits (such as ComputerName with $system_name) with appropriate template variables.  Remember, the windows answer file will be passed through the same template engine used for kickstart and preseeds.  This means that you can use ksmeta vars, built-ins, and  expressions (including snippets) like any other kickstart.  
+Edit your answer file, and replace any bits (such as ComputerName with $system_name) with appropriate template variables.  Remember, the windows answer file will be passed through the same template engine used for kickstarts and preseeds.  This means that you can use ksmeta vars, built-ins, and  expressions (including snippets) like any other kickstart.  
 
 We'll also need a couple of supporting scripts.  These will go in your scripts directory (/var/lib/cobbler/scripts on my system).  The first is mountmedia.cmd.  This script will mount your samba share, on the booted WinPE instance (it's run by init.cmd above)
 
